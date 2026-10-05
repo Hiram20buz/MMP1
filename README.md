@@ -179,11 +179,11 @@ $$
 
 El significado biológico del modelo requiere soluciones no negativas. Al evaluar el campo vectorial sobre las fronteras del cuadrante no negativo,
 
-$
+$$
 \left.\dot{x}\right|_{x=0}=0,
 \qquad
 \left.\dot{y}\right|_{y=0}=0.
-$
+$$
 
 Por lo tanto, el dominio
 
@@ -433,6 +433,7 @@ $$
 
 y el corrector de Heun se define como
 
+```math
 $$
 \mathbf{X}_{n+1}
 =
@@ -444,6 +445,7 @@ $$
 \mathbf{F}(\widetilde{\mathbf{X}}_{n+1})
 \right].
 $$
+```
 
 En el cuaderno se implementa con `dt = 1e-2`:
 
