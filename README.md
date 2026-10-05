@@ -7,9 +7,13 @@ Repositorio académico de la asignatura **Modelado Matemático**, correspondient
 El caso de estudio utiliza el sistema clásico de **Lotka–Volterra** para representar la interacción entre una población de liebres (*snowshoe hares*) y una población de linces (*lynx*) a partir de registros históricos comprendidos entre 1900 y 1920.
 
 **Docente:** Dr. Paul Antonio Valle Trujillo
+
 **Departamento:** Ingeniería Eléctrica y Electrónica
+
 **Institución:** Tecnológico Nacional de México / Instituto Tecnológico de Tijuana
+
 **Asignatura:** Modelado Matemático
+
 **Programa:** Maestría en Ciencias de la Ingeniería
 
 **Alumno:** Nombre completo. No. Control. correo institucional
