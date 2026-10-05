@@ -97,6 +97,20 @@ to = to - to(1);
 
 **Figura 1.** Datos históricos utilizados para construir las series de tiempo de las poblaciones de liebres y linces. Los registros fueron digitalizados manualmente con GraphGrabber a partir de la figura reportada en [2].
 
+### Regenerar `data.csv` desde `data.png`
+
+El script `digitize_graph.py` reproduce la digitización de las dos curvas de la figura. Recibe un PNG como entrada y genera un CSV con las columnas `t`, `x` (liebres) y `y` (linces):
+
+```bash
+python3 -m pip install -r requirements.txt
+```
+
+```bash
+python3 digitize_graph.py data.png data.csv
+```
+
+La calibración predeterminada corresponde a la figura incluida. Para otra imagen con la misma gráfica se pueden ajustar los parámetros de píxeles mediante las opciones de ayuda del script.
+
 ### Preprocesamiento considerado
 
 El cuaderno permite analizar cuatro configuraciones del conjunto de datos:
@@ -786,12 +800,16 @@ La estructura esperada para reproducir completamente la práctica es:
 .
 ├── README.md
 ├── Apellido_NoControl.mlx       # Cuaderno computacional principal
+├── digitize_graph.py             # Digitización de data.png a data.csv
 ├── data.csv                     # Series de tiempo digitalizadas
 ├── data.png                     # Figura de referencia de los datos
 ├── sistema.slx                  # Modelo presa–depredador en Simulink
 ├── parameters.mat               # Parámetros estimados a partir de los datos crudos
-├── Valle05211261.tex            # Desarrollo matemático de referencia
-└── *.pdf                        # Figuras vectoriales generadas por MATLAB
+├── matlab.mat                   # Datos auxiliares de MATLAB
+├── requirements.txt             # Dependencias del script de digitización
+├── Santiago_m25210047.pdf       # Documento académico
+└── Simulaciones numericas/      # Figuras vectoriales generadas por MATLAB
+    └── *.pdf
 ```
 
 Los archivos PDF son generados con `exportgraphics(...,'ContentType','vector')` durante las diferentes etapas de procesamiento, ajuste, simulación y análisis del plano de fase.
