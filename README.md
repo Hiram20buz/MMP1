@@ -62,7 +62,7 @@ Aplicar herramientas de modelado matemático, análisis de sistemas dinámicos y
 
 - Digitalizar y organizar los registros experimentales como series de tiempo.
 - Procesar los datos mediante suavizado y normalización.
-- Estimar los parámetros \($\alpha$), \($\beta$), \($\delta$) y \($\gamma$) mediante regresión no lineal.
+- Estimar los parámetros $\alpha$, $\beta$, $\delta$ y $\gamma$ mediante regresión no lineal.
 - Calcular estadísticos de los parámetros y criterios de bondad de ajuste.
 - Resolver numéricamente el sistema mediante el método de Heun.
 - Comparar diferentes solvers de MATLAB y Simulink.
@@ -79,14 +79,14 @@ Aplicar herramientas de modelado matemático, análisis de sistemas dinámicos y
 
 Los datos corresponden a los registros históricos de liebres y linces mostrados en la Figura 1.1 de *Modeling Life: The Mathematics of Biological Systems* [2]. Los valores fueron **digitalizados manualmente** a partir de la figura mediante el software libre **GraphGrabber** y almacenados posteriormente en el archivo `data.csv`.
 
-La figura original expresa las poblaciones en unidades de \(10^4\). Por esta razón, la función `getdata` recupera las magnitudes de población mediante
+La figura original expresa las poblaciones en unidades de $10^4$. Por esta razón, la función `getdata` recupera las magnitudes de población mediante
 
 ```matlab
 xo = sys(:,2)*1E4;
 yo = sys(:,3)*1E4;
 ```
 
-El tiempo se redefine para el ajuste de manera que el primer registro corresponda a \(t=0\):
+El tiempo se redefine para el ajuste de manera que el primer registro corresponda a $t=0$:
 
 ```matlab
 to = round(sys(:,1));
@@ -151,12 +151,12 @@ Las variables y parámetros se interpretan de la siguiente forma:
 
 | Símbolo | Descripción |
 |---|---|
-| \$x(t)$   | Población de liebres o presas |
-| \$y(t)$   | Población de linces o depredadores |
-| \$\alpha$ | Tasa de crecimiento de la población presa en ausencia de depredadores |
-| \$\beta$  | Intensidad del efecto de la interacción presa–depredador sobre las presas |
-| \$\delta$ | Contribución de la interacción con las presas al crecimiento de los depredadores |
-| \$\gamma$ | Tasa de mortalidad o emigración de los depredadores en ausencia de presas |
+| $x(t)$   | Población de liebres o presas |
+| $y(t)$   | Población de linces o depredadores |
+| $\alpha$ | Tasa de crecimiento de la población presa en ausencia de depredadores |
+| $\beta$  | Intensidad del efecto de la interacción presa–depredador sobre las presas |
+| $\delta$ | Contribución de la interacción con las presas al crecimiento de los depredadores |
+| $\gamma$ | Tasa de mortalidad o emigración de los depredadores en ausencia de presas |
 
 En forma vectorial,
 
@@ -197,7 +197,7 @@ x\geq 0,\; y\geq 0
 \right\}
 ```
 
-es positivamente invariante. Si $(x(0),y(0)\geq0)$, entonces las soluciones permanecen en el cuadrante no negativo para $\(t\geq0\)$.
+es positivamente invariante. Si $(x(0),y(0))\geq0$, entonces las soluciones permanecen en el cuadrante no negativo para $t\geq0$.
 
 ### 2. Puntos de equilibrio
 
@@ -243,7 +243,7 @@ $$
 
 #### Equilibrio en el origen
 
-Al evaluar en \(E_0=(0,0)\),
+Al evaluar en $E_0=(0,0)$,
 
 $$
 J(E_0)=
@@ -293,7 +293,7 @@ $$
 \lambda_{1,2}=\pm i\sqrt{\alpha\gamma}.
 $$
 
-La linealización produce valores propios puramente imaginarios. En la terminología estándar del sistema clásico de Lotka–Volterra, el equilibrio de coexistencia corresponde a un **centro**, asociado con oscilaciones sostenidas alrededor de \(E_1\); no es un equilibrio asintóticamente estable.
+La linealización produce valores propios puramente imaginarios. En la terminología estándar del sistema clásico de Lotka–Volterra, el equilibrio de coexistencia corresponde a un **centro**, asociado con oscilaciones sostenidas alrededor de $E_1$; no es un equilibrio asintóticamente estable.
 
 ### 4. Normalización del sistema
 
@@ -362,7 +362,7 @@ Para cada conjunto candidato de parámetros, la función interna `model`:
 1. resuelve el sistema de Lotka–Volterra mediante Heun;
 2. emplea un paso fijo `dt = 1e-2`;
 3. interpola las soluciones en los tiempos experimentales;
-4. devuelve las predicciones apiladas \([x;y]\) a `fitnlm`.
+4. devuelve las predicciones apiladas $[x;y]$ a `fitnlm`.
 
 El ajuste se ejecuta mediante
 
@@ -378,9 +378,9 @@ A partir del objeto `mdl`, el cuaderno obtiene:
 - error estándar (`SE`);
 - margen de error (`MoE`);
 - intervalo de confianza del 95 % (`CI95`);
-- valor \(p\);
+- valor $p$;
 - grados de libertad;
-- \(R^2\) ajustada;
+- $R^2$ ajustada;
 - suma residual de cuadrados (`RSS`);
 - criterio de información de Akaike corregido (`AICc`).
 
@@ -390,7 +390,7 @@ $$
 \mathrm{MoE}=t_{1-\alpha_s/2,\nu}\,SE,
 $$
 
-donde \(\alpha_s=0.05\) es el nivel de significancia y \(\nu\) representa los grados de libertad del ajuste.
+donde $\alpha_s=0.05$ es el nivel de significancia y $\nu$ representa los grados de libertad del ajuste.
 
 ### Parámetros guardados
 
@@ -654,7 +654,7 @@ El archivo `Apellido_NoControl.mlx` constituye el cuaderno computacional princip
 - Lectura de `data.csv`.
 - Gráfica de las series de tiempo.
 - Ajuste mediante `fitnlm`.
-- Estimación de \(\alpha,\beta,\delta,\gamma\).
+- Estimación de $\alpha,\beta,\delta,\gamma$.
 - Cálculo de estadísticos y criterios de bondad de ajuste.
 - Almacenamiento de `parameters.mat`.
 - Comparación datos–modelo.
@@ -674,7 +674,7 @@ El archivo `Apellido_NoControl.mlx` constituye el cuaderno computacional princip
 
 ##### 2.3.1 Desnormalización de los parámetros
 
-- Recuperación de \(\beta\) y \(\delta\) en la escala original.
+- Recuperación de $\beta$ y $\delta$ en la escala original.
 - Simulación del modelo desnormalizado.
 - Comparación con los datos originales.
 
@@ -688,8 +688,8 @@ El archivo `Apellido_NoControl.mlx` constituye el cuaderno computacional princip
 
 - Carga de los parámetros estimados.
 - Simulación del sistema mediante `LotkaVolterra`.
-- Soluciones \(x(t)\) y \(y(t)\).
-- Trayectoria \(y(x)\) en el plano de fase.
+- Soluciones $x(t)$ y $y(t)$.
+- Trayectoria $y(x)$ en el plano de fase.
 
 ### 4. Modelos de EDOs con Simulink
 
@@ -744,7 +744,7 @@ El archivo `Apellido_NoControl.mlx` constituye el cuaderno computacional princip
 
 #### 6.1 Condiciones iniciales: origen
 
-- Simulación exactamente en \(E_0=(0,0)\).
+- Simulación exactamente en $E_0=(0,0)$.
 - Simulación con condiciones iniciales alejadas del origen.
 - Representación del equilibrio en el plano de fase.
 
@@ -782,7 +782,7 @@ $$
 | `fitmodel` | Resuelve el problema inverso con `fitnlm`, integra el sistema mediante Heun y calcula los estadísticos del ajuste |
 | `plotfitting` | Compara gráficamente los datos experimentales con las soluciones obtenidas a partir de los parámetros estimados |
 | `LotkaVolterra` | Integra el sistema presa–depredador mediante Heun con `dt = 1e-2` |
-| `plotphase` | Grafica \(x(t)\), \(y(t)\) y la trayectoria en el plano de fase, y exporta el resultado en PDF vectorial |
+| `plotphase` | Grafica $x(t)$, $y(t)$ y la trayectoria en el plano de fase, y exporta el resultado en PDF vectorial |
 | `sysODE` | Define el campo vectorial para utilizarlo con los solvers ODE de MATLAB |
 
 [Volver al contenido](#contenido)
@@ -836,7 +836,7 @@ Para reproducir el análisis completo:
 
 1. Colocar `data.csv`, `Apellido_NoControl.mlx` y `sistema.slx` en el mismo directorio de trabajo de MATLAB.
 2. Ejecutar primero la sección **Datos experimentales y ajuste → Datos crudos**.
-3. Verificar que se genere `parameters.mat` con \(\alpha\), \(\beta\), \(\delta\) y \(\gamma\).
+3. Verificar que se genere `parameters.mat` con $\alpha$, $\beta$, $\delta$ y $\gamma$.
 4. Ejecutar las configuraciones de suavizado y normalización.
 5. Ejecutar **Soluciones y plano de fase**.
 6. Ejecutar las comparaciones de solvers en **Modelos de EDOs con Simulink**.
@@ -850,7 +850,7 @@ Al finalizar la práctica, el repositorio debe contener o permitir generar:
 
 - parámetros estimados del modelo;
 - tabla de estadísticos de los parámetros;
-- \(R^2\) ajustada, RSS y AICc;
+- $R^2$ ajustada, RSS y AICc;
 - gráficas de los datos crudos, suavizados y normalizados;
 - comparaciones entre datos y modelo ajustado;
 - soluciones temporales de ambas poblaciones;
