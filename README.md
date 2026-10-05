@@ -639,7 +639,7 @@ El flujo refleja el vínculo entre los datos, el problema inverso, la solución 
 <a id="actividades"></a>
 ## Actividades y secciones del cuaderno MATLAB
 
-El archivo `Apellido_NoControl.mlx` constituye el cuaderno computacional principal. Las actividades deben desarrollarse siguiendo **todas las secciones y subsecciones** incluidas en el documento.
+El archivo `Santiago_m25210047.mlx` constituye el cuaderno computacional principal. Las actividades deben desarrollarse siguiendo **todas las secciones y subsecciones** incluidas en el documento.
 
 ### 1. Información general
 
@@ -799,7 +799,7 @@ La estructura esperada para reproducir completamente la práctica es:
 ```text
 .
 ├── README.md
-├── Apellido_NoControl.mlx       # Cuaderno computacional principal
+├── Santiago_m25210047.mlx       # Cuaderno computacional principal
 ├── digitize_graph.py             # Digitización de data.png a data.csv
 ├── data.csv                     # Series de tiempo digitalizadas
 ├── data.png                     # Figura de referencia de los datos
@@ -840,7 +840,7 @@ Para ejecutar todas las secciones del repositorio se requiere:
 
 Para reproducir el análisis completo:
 
-1. Colocar `data.csv`, `Apellido_NoControl.mlx` y `sistema.slx` en el mismo directorio de trabajo de MATLAB.
+1. Colocar `data.csv`, `Santiago_m25210047.mlx` y `sistema.slx` en el mismo directorio de trabajo de MATLAB.
 2. Ejecutar primero la sección **Datos experimentales y ajuste → Datos crudos**.
 3. Verificar que se genere `parameters.mat` con $\alpha$, $\beta$, $\delta$ y $\gamma$.
 4. Ejecutar las configuraciones de suavizado y normalización.
