@@ -16,7 +16,7 @@ El caso de estudio utiliza el sistema clásico de **Lotka–Volterra** para repr
 
 **Programa:** Maestría en Ciencias de la Ingeniería
 
-**Alumno:** Nombre completo. No. Control. correo institucional
+**Alumno:** Ricardo Rioda Santiago Sanchez m25210047 m25210047@tectijuana.edu.mx
 
 ---
 
