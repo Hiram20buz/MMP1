@@ -426,23 +426,13 @@ $$
 el predictor de Euler es
 
 $$
-\widetilde{\mathbf{X}}_{n+1}
-=
-\mathbf{X}_n+h\mathbf{F}(\mathbf{X}_n),
+\widetilde{\mathbf{X}}_{n+1}=\mathbf{X}_n+h\mathbf{F}(\mathbf{X}_n),
 $$
 
 y el corrector de Heun se define como
 
 $$
-\mathbf{X}_{n+1}
-=
-\mathbf{X}_n+
-\frac{h}{2}
-\left[
-\mathbf{F}(\mathbf{X}_n)
-+
-\mathbf{F}(\widetilde{\mathbf{X}}_{n+1})
-\right].
+\mathbf{X}_{n+1}=\mathbf{X}_n+\frac{h}{2}\left[\mathbf{F}(\mathbf{X}_n)+\mathbf{F}(\widetilde{\mathbf{X}}_{n+1})\right].
 $$
 
 En el cuaderno se implementa con `dt = 1e-2`:
